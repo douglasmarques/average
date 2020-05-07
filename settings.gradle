@@ -1,0 +1,3 @@
+rootProject.name='AverageApp'
+include ':app'
+include ':library'

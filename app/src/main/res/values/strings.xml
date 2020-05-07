@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">AverageApp</string>
+    <string name="submit">Submit</string>
+    <string name="average_test">Average Test</string>
+    <string name="get_average">Get Average</string>
+    <string name="invalid_number_message">Please type a valid number</string>
+    <string name="average_message">Average: %.1f</string>
+    <string name="number_added_message">Number added to the array.</string>
+</resources>

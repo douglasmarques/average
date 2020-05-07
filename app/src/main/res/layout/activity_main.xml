@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray">
+
+    <TextView
+        android:id="@+id/labelTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/very_large"
+        android:gravity="center_horizontal"
+        android:paddingStart="@dimen/large"
+        android:paddingTop="@dimen/huge"
+        android:paddingEnd="@dimen/large"
+        android:paddingBottom="@dimen/huge"
+        android:text="@string/average_test"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/numberEditText"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:gravity="center"
+        android:itemBackground="@color/colorPrimary"
+        android:paddingStart="@dimen/medium"
+        android:paddingTop="@dimen/huge"
+        android:paddingEnd="@dimen/large"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/submitButton"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelTextView">
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/large"
+        android:layout_marginEnd="@dimen/large"
+        android:background="@color/black_light"
+        android:contentDescription="@null"
+        android:paddingStart="@dimen/large"
+        android:paddingEnd="@dimen/large"
+        android:text="@string/submit"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/numberEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/numberEditText" />
+
+    <Button
+        android:id="@+id/getAverageButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/very_large"
+        android:background="@color/black_light"
+        android:contentDescription="@null"
+        android:paddingStart="@dimen/large"
+        android:paddingEnd="@dimen/large"
+        android:text="@string/get_average"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/numberEditText" />
+
+    <TextView
+        android:id="@+id/averageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Average: 20.0"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:paddingTop="@dimen/huge"
+        app:layout_constraintTop_toBottomOf="@+id/getAverageButton"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
